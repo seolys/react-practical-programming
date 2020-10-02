@@ -7,3 +7,5 @@
   - [5.2 css - module](./css2-module)
   - [5.3 css - sass](./css3-sass)
   - [5.4 css - css in js](./css4-cssinjs)
+- [6. javascript SPA](./spa)
+- [7. react-router](./react-router)

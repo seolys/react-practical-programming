@@ -1,21 +1,20 @@
 {
-  "name": "cra-test",
+  "name": "css2-module",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cra-template": "1.0.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "classnames": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "startComments": "개발모드로 실행한다(최적화X). 실행명령어: npm start. HTTPS로 실행하고싶을때 명령어: HTTPS=true npm start",
     "start": "react-scripts start",
-    "buildComments": "배포할때 사용. 빌드명령어: npm run build. build폴더에 정적파일이 생성됨. 서버실행 명령어: npx serve -s build",
     "build": "react-scripts build",
-    "testComments": "명령어: npm test",
     "test": "react-scripts test",
-    "ejectComments": "설정파일 추출. 직접 개발환경을 구축하고싶을때 사용. 수동으로 설정파일을 설정해야함.",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

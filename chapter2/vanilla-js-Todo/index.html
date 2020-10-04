@@ -1,0 +1,57 @@
+<!--
+    VanillaJS로 작성하는 Todo.
+    명령형 프로그래밍.
+    Javascript에 비즈니스로직과 화면UI부분이 섞여있다.
+    UI가 어떤모습으로 출력될지 한눈에 보이지 않는다.
+-->
+<html>
+  <body>
+    <div class="todo">
+      <h3>할 일 목록</h3>
+      <ul class="list"></ul>
+      <input class="desc" type="text" />
+      <button onclick="onAdd()">추가</button>
+      <button onclick="onSaveToServer()">서버에 저장</button>
+    </div>
+    <script>
+      let currentId = 1;
+      const todoList = [];
+      // Todo를 추가한다.
+      function onAdd() {
+        const descEl = document.querySelector(".todo .desc");
+        const todo = { id: currentId++, desc: descEl.value };
+        todoList.push(todo);
+        const todoEl = makeTodoElement(todo);
+        const listEl = document.querySelector(".todo .list");
+        listEl.appendChild(todoEl);
+      }
+      // Todo Element를 생성한다.
+      function makeTodoElement(todo) {
+        const todoEl = document.createElement("li");
+        const spanEl = document.createElement("span");
+        const buttonEl = document.createElement("button");
+        spanEl.innerHTML = todo.desc;
+        buttonEl.innerHTML = "삭제";
+        buttonEl.dataset.id = todo.id;
+        buttonEl.onclick = onDelete;
+        todoEl.appendChild(spanEl);
+        todoEl.appendChild(buttonEl);
+        return todoEl;
+      }
+      // Todo를 삭제한다.
+      function onDelete(e) {
+        const id = Number(e.target.dataset.id);
+        const index = todoList.findIndex((item) => item.id === id);
+        if (index >= 0) {
+          todoList.splice(index, 1);
+          const listEl = document.querySelector(".todo .list");
+          const todoEl = e.target.parentNode;
+          listEl.removeChild(todoEl);
+        }
+      }
+      function onSaveToServer() {
+        // todoList를 서버로 전송한다.
+      }
+    </script>
+  </body>
+</html>

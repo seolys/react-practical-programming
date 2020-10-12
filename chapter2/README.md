@@ -7,3 +7,6 @@
     - 고차함수로, React.memo로 해당 컴포넌트를 감싸면 된다.
     - React.memo의 두번째파라메터로 propsAreEqual이라는 함수를 사용하여 특정값만 비교시킬수도 있다.
   - React.useState
+- [3. 컴포넌트 함수의 반환값](./component-function-return)
+  - 컴포넌트에서 반환할 수 있는 값
+  - ReactDOM.createPortal

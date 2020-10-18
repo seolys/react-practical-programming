@@ -1,17 +1,23 @@
-- 1. 리액트를 사용한 코드의 특징(Todo)
-  - [VanillaJs](./vanilla-js-Todo)
-  - [React](./react-todo)
-- [2. 속성값과 상태값](./live)
-  - React.memo
-    - 리랜더링이 필요한 상황에서만 리랜더링한다
-    - 고차함수로, React.memo로 해당 컴포넌트를 감싸면 된다.
-    - React.memo의 두번째파라메터로 propsAreEqual이라는 함수를 사용하여 특정값만 비교시킬수도 있다.
-  - React.useState
-- [3. 컴포넌트 함수의 반환값](./component-function-return)
+### [1. 리액트를 사용한 코드의 특징(Todo)](./react-todo)
+
+- [VanillaJs](./vanilla-js-Todo)
+- [React](./react-todo)
+
+### [2. 속성값과 상태값](./live)
+
+- React.memo
+  - 리랜더링이 필요한 상황에서만 리랜더링한다
+  - 고차함수로, React.memo로 해당 컴포넌트를 감싸면 된다.
+  - React.memo의 두번째파라메터로 propsAreEqual이라는 함수를 사용하여 특정값만 비교시킬수도 있다.
+- React.useState
+
+### [3. 컴포넌트 함수의 반환값](./component-function-return)
   - 컴포넌트에서 반환할 수 있는 값
   - ReactDOM.createPortal
-- [4. 가상돔(virtual-dom)](./virtual-dom)
-- [5. hook](./hook)
+
+### [4. 가상돔(virtual-dom)](./virtual-dom)
+
+### [5. hook](./hook)
 
   - Hook은 배치로 상태를 관리한다.
   - React Hook의 종류
@@ -36,9 +42,10 @@
     - useReducer
     - useCallback : 메모이제이션 기능.
 
-- [6. custom hook](./hook-custom)
+### [6. custom hook](./hook-custom)
   - hook을 함수로 감싸서 기능을 제공하면 그것이 custom hook.
-- [7. hook 규칙](./hook-rule)
+
+### [7. hook 규칙](./hook-rule)
   - 하나의 컴포넌트에서 훅을 호출하는 순서는 항상 같아야 한다.
     - if, for, 내부function에서 hook을 사용하는것은 순서가 동적으로 섞일 수 있기때문에 버그를 낳는다.
     - 훅은 함수형 컴포넌트 또는 커스텀 훅 안에서만 호출되어야 한다.

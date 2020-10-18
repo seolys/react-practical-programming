@@ -12,10 +12,13 @@
   - ReactDOM.createPortal
 - [4. 가상돔(virtual-dom)](./virtual-dom)
 - [5. hook](./hook)
+
   - Hook은 배치로 상태를 관리한다.
   - React Hook의 종류
+
     - useState
     - useEffect
+
       - 모든 부수 효과는 useEffect 훅에서 처리는것이 좋다.
       - 컴포넌트 렌더링 중에 부수 효과를 발생시키는 것은 프로그램의 복잡도를 크게 증가시킨다.
       - 유닛테스트를 작성하기 힘들어지는 등, 순수 함수가 가지는 여러 장점을 포기하는 것이다.
@@ -32,5 +35,10 @@
 
     - useReducer
     - useCallback : 메모이제이션 기능.
-- [6. custom hook]
-  - 
+
+- [6. custom hook](./hook-custom)
+  - hook을 함수로 감싸서 기능을 제공하면 그것이 custom hook.
+- [7. hook 규칙](./hook-rule)
+  - 하나의 컴포넌트에서 훅을 호출하는 순서는 항상 같아야 한다.
+    - if, for, 내부function에서 hook을 사용하는것은 순서가 동적으로 섞일 수 있기때문에 버그를 낳는다.
+    - 훅은 함수형 컴포넌트 또는 커스텀 훅 안에서만 호출되어야 한다.
